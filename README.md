@@ -8,7 +8,7 @@ This repository contains solutions for all 25 days of Advent of Code 2025. Each 
 
 ```
 dayXX/
-├── solution.py    # Python solution for both parts
+├── main.go        # Go solution for both parts
 ├── input.txt      # Your personal puzzle input
 └── example.txt    # Example input from puzzle description
 ```
@@ -20,13 +20,13 @@ dayXX/
 To run the solution for a specific day:
 
 ```bash
-python run.py <day_number>
+go run run.go <day_number>
 ```
 
 Example:
 ```bash
-python run.py 1    # Runs day 1
-python run.py 15   # Runs day 15
+go run run.go 1    # Runs day 1
+go run run.go 15   # Runs day 15
 ```
 
 ### Running All Days
@@ -34,7 +34,7 @@ python run.py 15   # Runs day 15
 To run all implemented solutions:
 
 ```bash
-python run.py all
+go run run.go all
 ```
 
 ### Running an Individual Solution
@@ -43,7 +43,15 @@ You can also run each day's solution directly:
 
 ```bash
 cd day01
-python solution.py
+go run main.go
+```
+
+Or build and run:
+
+```bash
+cd day01
+go build -o solution
+./solution
 ```
 
 ## Workflow
@@ -54,12 +62,12 @@ For each day:
 2. Read the puzzle description
 3. Copy the example input into `dayXX/example.txt`
 4. Copy your personal puzzle input into `dayXX/input.txt`
-5. Implement your solution in `dayXX/solution.py`
+5. Implement your solution in `dayXX/main.go`
 6. Run and test your solution
 
 ## Requirements
 
-- Python 3.6 or higher
+- Go 1.19 or higher
 - No external dependencies required (solutions use only standard library)
 
 ## Notes
