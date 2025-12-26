@@ -41,14 +41,19 @@ func spinLock(directions []string, numbers []int) (int, error) {
 	denom := 100
 	for i, num := range numbers {
 		dir := directions[i]
+		var times int
 		if dir == "L" {
-			curr = (denom + curr - num) % denom
+			if num > curr {
+				times = (num - curr + denom - 1) / denom
+			}
+			curr = (denom + curr - num%denom) % denom
 		} else if dir == "R" {
+			if curr+num >= denom {
+				times = (curr + num) / denom
+			}
 			curr = (curr + num) % denom
 		}
-		if curr == 0 {
-			password++
-		}
+		password += times
 	}
 	return password, nil
 }
