@@ -24,6 +24,10 @@ def run_day(day_num):
     
     # Import and run the solution
     spec = importlib.util.spec_from_file_location(f"day{day_num}", solution_path)
+    if spec is None or spec.loader is None:
+        print(f"Error: Could not load module from {solution_path}")
+        return False
+    
     module = importlib.util.module_from_spec(spec)
     
     # Change to the day's directory so relative file paths work
