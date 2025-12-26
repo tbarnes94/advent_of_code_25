@@ -4,7 +4,7 @@ My advent of code project for 2025. See https://adventofcode.com/
 
 ## Structure
 
-This repository contains solutions for all 25 days of Advent of Code 2025. Each day has its own directory with the following structure:
+This repository contains solutions for all 12 days of Advent of Code 2025. Each day has its own directory with the following structure:
 
 ```
 dayXX/
@@ -26,7 +26,7 @@ go run run.go <day_number>
 Example:
 ```bash
 go run run.go 1    # Runs day 1
-go run run.go 15   # Runs day 15
+go run run.go 12   # Runs day 12
 ```
 
 ### Running All Days

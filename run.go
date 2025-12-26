@@ -34,7 +34,7 @@ func main() {
 	arg := os.Args[1]
 	
 	if strings.ToLower(arg) == "all" {
-		for day := 1; day <= 25; day++ {
+		for day := 1; day <= 12; day++ {
 			if err := runDay(day); err != nil {
 				fmt.Printf("Error running day %d: %v\n", day, err)
 			}
@@ -45,8 +45,8 @@ func main() {
 			fmt.Println("Error: Invalid day number")
 			os.Exit(1)
 		}
-		if day < 1 || day > 25 {
-			fmt.Println("Error: Day must be between 1 and 25")
+		if day < 1 || day > 12 {
+			fmt.Println("Error: Day must be between 1 and 12")
 			os.Exit(1)
 		}
 		if err := runDay(day); err != nil {

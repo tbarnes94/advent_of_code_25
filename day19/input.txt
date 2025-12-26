@@ -1,1 +1,0 @@
-# Paste your puzzle input here from https://adventofcode.com/2025/day/19/input
